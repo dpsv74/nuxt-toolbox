@@ -7,18 +7,18 @@
       method="POST"
       action="/success"
     >
-    <p>
-     Please submit your request details:
-    </p>
+      <p class="hidden">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
+      <input type="hidden" name="form-name" value="feedback" />
       <label for="name">Name</label>
-      <input id="name" type="text" name="name" required/>
+      <input id="name" type="text" name="name" />
       <label for="email">Email</label>
       <input id="email" type="email" name="email" required />
-      <label for="phone">Phone</label>
-      <input id="phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-      
-      <label for="meetingtime">Pick a date/time</label>
-      <input type="datetime-local" id="meetingtime" name="meetingtime">
+      <label for="feedback">What is your feedback?</label>
+      <textarea id="feedback" wrap="soft" name="feedback" required></textarea>
           
       <button type="submit">Submit</button>
     </form>
