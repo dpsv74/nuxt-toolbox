@@ -8,7 +8,7 @@ describe('Testing form', () => {
     cy.visit('/')
   })
 
-  it('check for validation message for invalid email input', () => {
+  /* it('check for validation message for invalid email input', () => {
     cy.get('[type="email"]').type('not_an_email')
     cy.get('[type="submit"]').click()
     cy.get('[type="email"]').then(($input) => {
@@ -40,4 +40,5 @@ describe('Testing form', () => {
     cy.url().should('include', '/success')
 
   })
+  */
 })
